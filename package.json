@@ -1,0 +1,30 @@
+{
+  "name": "@styx-tools/vision",
+  "version": "1.0.0",
+  "description": "Universal Computer Vision & Image Understanding MCP Tool for Styx Agent OS",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "styx-vision": "./bin/styx-vision"
+  },
+  "scripts": {
+    "start": "node src/index.js daemon",
+    "test": "node tests/vision.test.js"
+  },
+  "keywords": [
+    "styx",
+    "vision",
+    "multimodal",
+    "mcp",
+    "model-context-protocol",
+    "agent-os"
+  ],
+  "author": "Styx Community",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pino": "^9.6.0"
+  }
+}

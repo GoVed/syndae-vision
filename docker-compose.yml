@@ -1,0 +1,32 @@
+services:
+  styx-vision:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: styx-vision-connector
+    restart: unless-stopped
+    ports:
+      - "8773:8773"
+    environment:
+      - VISION_BACKEND=${VISION_BACKEND:-ollama}
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      - VISION_MODEL=${VISION_MODEL:-moondream}
+      - VISION_API_URL=${VISION_API_URL:-http://host.docker.internal:11434/v1}
+      - VISION_API_KEY=${VISION_API_KEY:-}
+      - HTTP_PORT=8773
+      - HTTP_HOST=0.0.0.0
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - STYX_API_URL=http://host.docker.internal:3000
+      - STYX_ACCESS_KEY=${STYX_ACCESS_KEY:-styx-local-dev-key}
+    volumes:
+      - ./instructions.md:/app/instructions.md:ro
+      - ./manifest.json:/app/manifest.json:ro
+      - ./src:/app/src:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8773/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s

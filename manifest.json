@@ -1,0 +1,31 @@
+{
+  "name": "vision",
+  "display_name": "Universal Computer Vision & Image Inspector",
+  "version": "1.0.0",
+  "description": "High-performance, generic Computer Vision & Image Understanding MCP Tool for Styx Agent OS supporting local vision models (Moondream, Qwen2-VL, MiniCPM-V, LLaVA) and cloud APIs (OpenAI, Claude, Gemini).",
+  "container_name": "styx-vision-connector",
+  "port": 8773,
+  "protocol": "vision",
+  "instructions_file": "instructions.md",
+  "has_docker": true,
+  "tools": [
+    {
+      "name": "describe_image",
+      "description": "Analyze an image (from a local file path, URL, or base64) and return a rich, descriptive summary of its visual contents, objects, and setting.",
+      "risk_level": "LOW",
+      "policy": "AUTONOMOUS"
+    },
+    {
+      "name": "inspect_image",
+      "description": "Ask a specific question about an image to analyze details, count objects, read charts, or identify elements.",
+      "risk_level": "LOW",
+      "policy": "AUTONOMOUS"
+    },
+    {
+      "name": "ocr_image",
+      "description": "Extract all visible text, numbers, labels, signs, or handwriting from an image.",
+      "risk_level": "LOW",
+      "policy": "AUTONOMOUS"
+    }
+  ]
+}
