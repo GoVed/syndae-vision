@@ -1,25 +1,25 @@
 {
-  "name": "@styx-tools/vision",
+  "name": "@syndae-tools/vision",
   "version": "1.0.0",
-  "description": "Universal Computer Vision & Image Understanding MCP Tool for Styx Agent OS",
+  "description": "Universal Computer Vision & Image Understanding MCP Tool for Syndae Agent OS",
   "type": "module",
   "main": "src/index.js",
   "bin": {
-    "styx-vision": "./bin/styx-vision"
+    "syndae-vision": "./bin/syndae-vision"
   },
   "scripts": {
     "start": "node src/index.js daemon",
     "test": "node tests/vision.test.js"
   },
   "keywords": [
-    "styx",
+    "syndae",
     "vision",
     "multimodal",
     "mcp",
     "model-context-protocol",
     "agent-os"
   ],
-  "author": "Styx Community",
+  "author": "Syndae Community",
   "license": "MIT",
   "dependencies": {
     "commander": "^13.1.0",

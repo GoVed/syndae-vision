@@ -1,7 +1,7 @@
 # Universal Vision & Image Inspector Tool Instructions
 
 ## Overview
-The **Vision Tool** provides advanced visual perception and analysis capabilities to Styx Agent OS:
+The **Vision Tool** provides advanced visual perception and analysis capabilities to Syndae Agent OS:
 1. **`describe_image`**: Generates a thorough, comprehensive description of what is in an image.
 2. **`inspect_image`**: Answers a targeted question about an image (e.g. "What model car is this?", "What is the error message on the screen?").
 3. **`ocr_image`**: Transcribes all readable text, signs, logos, and receipts.

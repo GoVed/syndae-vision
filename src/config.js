@@ -26,9 +26,9 @@ export const config = {
   apiUrl: (process.env.VISION_API_URL || 'http://localhost:11434/v1').replace(/\/+$/, ''),
   apiKey: process.env.VISION_API_KEY || '',
 
-  // Styx Host Integration
-  styxApiUrl: process.env.STYX_API_URL || 'http://localhost:3000',
-  styxAccessKey: process.env.STYX_ACCESS_KEY || 'styx-local-dev-key',
+  // Syndae Host Integration
+  syndaeApiUrl: process.env.SYNDAE_API_URL || 'http://localhost:3000',
+  syndaeAccessKey: process.env.SYNDAE_ACCESS_KEY || 'syndae-local-dev-key',
 
   // Directory paths
   rootDir,

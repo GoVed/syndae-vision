@@ -8,7 +8,7 @@ import { describeImage, inspectImage } from './vision/engine.js';
 const program = new Command();
 
 program
-  .name('styx-vision')
+  .name('syndae-vision')
   .description('Universal Computer Vision & Multimodal Image Understanding Tool')
   .version('1.0.0');
 

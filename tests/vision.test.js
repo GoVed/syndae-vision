@@ -73,7 +73,7 @@ test('MCP: tool catalog contains describe, inspect, and ocr', () => {
 await testAsync('MCP: initialize protocol handshake', async () => {
   const res = await handleMcpRequest({ jsonrpc: '2.0', id: 1, method: 'initialize' });
   assert.strictEqual(res.result.protocolVersion, '2024-11-05');
-  assert.strictEqual(res.result.serverInfo.name, 'styx-vision');
+  assert.strictEqual(res.result.serverInfo.name, 'syndae-vision');
 });
 
 await testAsync('MCP: tools/list returns all 3 tools', async () => {

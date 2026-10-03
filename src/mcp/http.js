@@ -26,7 +26,7 @@ export function startHttpServer() {
   app.get('/health', (req, res) => {
     res.json({
       status: 'healthy',
-      service: 'styx-vision',
+      service: 'syndae-vision',
       version: '1.0.0',
       uptime: process.uptime()
     });
@@ -35,7 +35,7 @@ export function startHttpServer() {
   // 2. Status & Configuration
   app.get('/status', (req, res) => {
     res.json({
-      service: 'styx-vision',
+      service: 'syndae-vision',
       backend: config.backend,
       model: config.visionModel,
       ollama_url: config.ollamaBaseUrl,
@@ -45,7 +45,7 @@ export function startHttpServer() {
     });
   });
 
-  // 3. Instructions endpoint for Styx auto-ingestion
+  // 3. Instructions endpoint for Syndae auto-ingestion
   app.get('/instructions', (req, res) => {
     try {
       if (fs.existsSync(config.instructionsPath)) {
@@ -118,7 +118,7 @@ export function startHttpServer() {
   const server = app.listen(config.port, config.host, () => {
     logger.info(
       { port: config.port, host: config.host, backend: config.backend, model: config.visionModel },
-      'Styx Universal Vision MCP HTTP Server listening'
+      'Syndae Universal Vision MCP HTTP Server listening'
     );
   });
 
